@@ -368,7 +368,17 @@
       display: grid; grid-template-columns: 1fr 1fr;
       max-height: 90vh; overflow: hidden; grid-template-rows: 1fr;
     }
-    @media(max-width:600px) { .modal { grid-template-columns: 1fr; } }
+    @media(max-width:600px) {
+      .modal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        max-height: 90vh;
+      }
+      .modal-img {
+        aspect-ratio: 4/3;
+        max-height: 36vh;
+      }
+    }
     .modal-img {
       aspect-ratio: 3/4;
       background: var(--panel);
